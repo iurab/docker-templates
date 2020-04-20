@@ -12,8 +12,8 @@
     <Support>https://github.com/brotandgames/ciao</Support>
     <Overview>ciao checks HTTP(S) URL endpoints for a HTTP status code (or errors on the lower TCP stack) and sends a notification on status change via E-Mail or Webhooks.</Overview>
     <Category>Backup: Cloud: Network:Other Productivity: Tools:</Category>
-    <WebUI>http://[IP]:[PORT:8200]/</WebUI>
-    <Icon>https://raw.githubusercontent.com/iurab/docker-templates/master/linuxserver.io/img/duplicati-icon.png</Icon>
+    <WebUI>http://[IP]:[PORT:8090]/</WebUI>
+    <Icon>https://github.com/iurab/docker-templates/raw/master/img/ciao.png</Icon>
     <Description>ciao checks HTTP(S) URL endpoints for a HTTP status code (or errors on the lower TCP stack) and sends a notification on status change via E-Mail or Webhooks</Description>
     <Networking>
         <Mode>bridge</Mode>
