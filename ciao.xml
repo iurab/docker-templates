@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container>
-    <TemplateURL>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/duplicati.xml</TemplateURL>
+    <TemplateURL>https://raw.githubusercontent.com/iurab/docker-templates/master/ciao.xml</TemplateURL>
     <Date>2020-04-20</Date>
     <Beta>False</Beta>
     <Name>ciao</Name>
@@ -11,7 +11,6 @@
     <Privileged>false</Privileged>
     <Support>https://github.com/brotandgames/ciao</Support>
     <Overview>ciao checks HTTP(S) URL endpoints for a HTTP status code (or errors on the lower TCP stack) and sends a notification on status change via E-Mail or Webhooks.</Overview>
-    <Category>Backup: Cloud: Network:Other Productivity: Tools:</Category>
     <WebUI>http://[IP]:[PORT:8090]/</WebUI>
     <Icon>https://github.com/iurab/docker-templates/raw/master/img/ciao.png</Icon>
     <Description>ciao checks HTTP(S) URL endpoints for a HTTP status code (or errors on the lower TCP stack) and sends a notification on status change via E-Mail or Webhooks</Description>
@@ -27,6 +26,7 @@
     </Networking>
     <Data>
         <Volume>
+            <HostDir>/mnt/user/appdata/ciao</HostDir>
             <ContainerDir>/app/db/sqlite</ContainerDir>
             <Mode>rw</Mode>
         </Volume>
@@ -35,42 +35,52 @@
         <Variable>
             <Value>sensitive_secret_key_base</Value>
             <Name>SECRET_KEY_BASE</Name>
+            <Mode/>
         </Variable>
         <Variable>
             <Value>smtp.yourhost.com</Value>
             <Name>SMTP_ADDRESS</Name>
+            <Mode/>
         </Variable>
         <Variable>
             <Value>ciao@yourhost.com</Value>
             <Name>SMTP_EMAIL_FROM</Name>
+            <Mode/>
         </Variable>
         <Variable>
             <Value>you@yourhost.com</Value>
             <Name>SMTP_EMAIL_TO</Name>
+            <Mode/>
         </Variable>
         <Variable>
             <Value>587</Value>
             <Name>SMTP_PORT</Name>
+            <Mode/>
         </Variable>
         <Variable>
             <Value>smtp.yourhost.com</Value>
             <Name>SMTP_DOMAIN</Name>
+            <Mode/>
         </Variable>
         <Variable>
             <Value>plain</Value>
             <Name>SMTP_AUTHENTICATION</Name>
+            <Mode/>
         </Variable>
         <Variable>
             <Value>true</Value>
             <Name>SMTP_ENABLE_STARTTLS_AUTO</Name>
+            <Mode/>
         </Variable>
         <Variable>
             <Value>ciao</Value>
             <Name>SMTP_USERNAME</Name>
+            <Mode/>
         </Variable>
         <Variable>
             <Value>sensitive_password</Value>
             <Name>SMTP_PASSWORD</Name>
+            <Mode/>
         </Variable>
     </Environment>
 </Container>
