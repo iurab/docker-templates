@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Container>
+    <TemplateURL>https://raw.githubusercontent.com/iurab/docker-templates/master/loki.xml</TemplateURL>
+    <Date>2020-04-20</Date>
+    <Beta>False</Beta>
+    <Name>loki</Name>
+    <Project>https://grafana.com/oss/loki/</Project>
+    <Repository>grafana/loki</Repository>
+    <Registry>https://hub.docker.com/r/grafana/loki</Registry>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <Support>https://github.com/grafana/loki</Support>
+    <Overview>Loki: like Prometheus, but for logs.</Overview>
+    <WebUI>http://[IP]:[PORT:3100]/</WebUI>
+    <Icon>https://github.com/iurab/docker-templates/raw/master/img/loki.png</Icon>
+    <Description>Loki is a horizontally-scalable, highly-available, multi-tenant log aggregation system inspired by Prometheus. It is designed to be very cost effective and easy to operate. It does not index the contents of the logs, but rather a set of labels for each log stream.</Description>
+    <Networking>
+        <Mode>bridge</Mode>
+        <Publish>
+            <Port>
+                <HostPort>3100</HostPort>
+                <ContainerPort>3100</ContainerPort>
+                <Protocol>tcp</Protocol>
+            </Port>
+        </Publish>
+    </Networking>
+    <Data>
+        <Volume>
+            <HostDir>/mnt/user/appdata/loki</HostDir>
+            <ContainerDir>/loki</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+    </Data>
+    <Environment>
+    </Environment>
+</Container>
