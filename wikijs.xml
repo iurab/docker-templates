@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Container>
+    <TemplateURL>https://raw.githubusercontent.com/iurab/docker-templates/master/wikijs.xml</TemplateURL>
+    <Date>2020-06-01</Date>
+    <Beta>False</Beta>
+    <Name>wikijs</Name>
+    <Project>https://wiki.js.org/</Project>
+    <Repository>linuxserver/wikijs </Repository>
+    <Registry>https://hub.docker.com/r/grafana/loki</Registry>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <Support>https://hub.docker.com/r/linuxserver/wikijs</Support>
+    <Overview>The most powerful and extensible open source Wiki software</Overview>
+    <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+    <Icon>https://github.com/iurab/docker-templates/raw/master/img/wikijs.png</Icon>
+    <Description>Make documentation a joy to write using Wiki.js's beautiful and intuitive interface!</Description>
+    <Networking>
+        <Mode>bridge</Mode>
+        <Publish>
+            <Port>
+                <HostPort>3000</HostPort>
+                <ContainerPort>3000</ContainerPort>
+                <Protocol>tcp</Protocol>
+            </Port>
+        </Publish>
+    </Networking>
+    <Data>
+        <Volume>
+            <HostDir>/mnt/user/appdata/wikijs/config</HostDir>
+            <ContainerDir>/config</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+        <Volume>
+            <HostDir>/mnt/user/appdata/wikijs/data</HostDir>
+            <ContainerDir>/data</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+    </Data>
+    <Environment>
+        <Variable>
+            <Value>99</Value>
+            <Name>PUID</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value>100</Value>
+            <Name>PGID</Name>
+            <Mode/>
+        </Variable>
+    </Environment>
+</Container>
