@@ -6,7 +6,7 @@
     <Name>wikijs</Name>
     <Project>https://wiki.js.org/</Project>
     <Repository>linuxserver/wikijs </Repository>
-    <Registry>https://hub.docker.com/r/grafana/loki</Registry>
+    <Registry>https://hub.docker.com/r/linuxserver/wikijs</Registry>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
     <Support>https://hub.docker.com/r/linuxserver/wikijs</Support>
