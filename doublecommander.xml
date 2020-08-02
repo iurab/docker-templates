@@ -30,7 +30,7 @@
             <ContainerDir>/config</ContainerDir>
             <Mode>rw</Mode>
         </Volume>
-                <Volume>
+        <Volume>
             <HostDir>/mnt/user/</HostDir>
             <ContainerDir>/data</ContainerDir>
             <Mode>rw</Mode>
